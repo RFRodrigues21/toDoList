@@ -21,7 +21,7 @@
   {#if showForm}
     <TodoForm id="form" />
   {/if}
-
+  
   {#each $todos as todo}
     <div class="mb-2 mt-10">
       <Todo todo={todo} index={todo.id} />
