@@ -2,10 +2,10 @@ import {writable } from "svelte/store";
 
 export const todos = writable([]);
 
-export const addTodo = (text) => {
+export const addTodo = (title, text, selectedLabels) => {
     todos.update( (cur) => {
 
-        const newTodos = [...cur, { text, completed: false, id: Date.now()}];
+        const newTodos = [...cur, { title, text, selectedLabels, completed: false, id: Date.now()}];
 
         return newTodos;
     });
